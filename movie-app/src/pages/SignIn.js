@@ -1,9 +1,13 @@
 import React from 'react'
+import Layout from '../components/Layout'
 
 function SignIn() {
   return (
     <div>
-      <h1>Sign In</h1>
+        <Layout>
+        <h1>Sign In</h1>
+        </Layout>
+     
     </div>
   )
 }
