@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
-
+import { supabase } from '../supabase'
 function SignIn() {
   return (
     <div>
