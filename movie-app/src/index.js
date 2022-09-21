@@ -4,13 +4,16 @@ import './index.css';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
+import { AuthProvider } from './auth';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <AuthProvider>
   <BrowserRouter>
   <Routes>
 <Route index element={<Home/>}/>
 <Route path='sign-In' element={<SignIn/>}/>
   </Routes>
   </BrowserRouter>
+  </AuthProvider>
 );
 
