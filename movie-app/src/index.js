@@ -5,6 +5,8 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import { AuthProvider } from './auth';
+import ProtectedRoute from './components/ProtectedRoute';
+import Profile from './pages/Profile';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <AuthProvider>
@@ -12,6 +14,7 @@ root.render(
   <Routes>
 <Route index element={<Home/>}/>
 <Route path='sign-In' element={<SignIn/>}/>
+<Route path='profile' element={<ProtectedRoute><Profile></Profile></ProtectedRoute>}/>
   </Routes>
   </BrowserRouter>
   </AuthProvider>
