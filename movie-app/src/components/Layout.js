@@ -8,6 +8,7 @@ function Layout({children}) {
             <ul>
                 <li><Link to={"/"}>Home</Link></li>
                 <li><Link to={"/sign-In"}>SignIn</Link></li>
+                <li><Link to={"/profile"}>Profile</Link></li>
             </ul>
         </header>
       <main>
