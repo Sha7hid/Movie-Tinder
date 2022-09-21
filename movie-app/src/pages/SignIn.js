@@ -7,7 +7,7 @@ function SignIn() {
  const [message , setMessage] = useState("");
   const handleSignIn = async (e) => {
     e.preventDefault()
- const signIn = await auth.Login(email)
+ const signIn = await auth.login(email)
 
  if(signIn.error){
   setMessage(signIn.error.message)

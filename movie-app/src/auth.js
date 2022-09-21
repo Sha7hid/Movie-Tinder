@@ -16,7 +16,7 @@ export const useAuth = () => {
 function useProvideAuth(){
     const [user, setUser] = useState(null)
 
-    const Login = async (email) => {
+    const login = async (email) => {
         const {error, user} = await supabase.auth.signIn({email})
 
         if(error){
@@ -24,7 +24,7 @@ function useProvideAuth(){
         } 
         return {error, user}
     }
-    const Logout = async () => {
+    const logout = async () => {
 const {error} = await supabase.auth.signOut()
 if(error){
     console.log(error)
@@ -49,7 +49,7 @@ if(error){
 
    return {
     user,
-    Login,
-    Logout
+    login,
+    logout
    }
 }
