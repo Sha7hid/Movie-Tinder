@@ -13,7 +13,7 @@ params:{
   }
 })
 
-setMovies(data.results)
+setMovies(data.results);
   }
   useEffect(()=>{
 fetchMovies()

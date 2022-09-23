@@ -29,6 +29,11 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
+.movie{
+  width: 300px;
+  height: 500px;
+  background-color: var(--brand-color);
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
