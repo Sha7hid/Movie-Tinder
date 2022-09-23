@@ -1,9 +1,9 @@
 import React ,{useEffect}from 'react'
 import Layout from '../components/Layout'
-
+import axios from 'axios';
 function Home() {
   const fetchMovies = async () =>{
-    
+const {data} = await axios.get("")
   }
   useEffect(()=>{
 fetchMovies()
