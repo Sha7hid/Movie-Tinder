@@ -18,6 +18,7 @@ fetchMovies()
     <div>
         <Layout>
         <h1>Welcome</h1>
+        
         </Layout>
      
     </div>
