@@ -20,7 +20,7 @@ function Layout({children}) {
               }
                 </ul>
         </header>
-      <main>
+      <main className="container">
         {children}
       </main>
     </div>
