@@ -1,7 +1,13 @@
-import React from 'react'
+import React ,{useEffect}from 'react'
 import Layout from '../components/Layout'
 
 function Home() {
+  const fetchMovies = async () =>{
+    
+  }
+  useEffect(()=>{
+fetchMovies()
+  },[])
   return (
     <div>
         <Layout>
