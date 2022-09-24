@@ -3,7 +3,7 @@ import React from 'react'
 function Profile() {
   return (
     <div>
-      <h1>Protected Page</h1>
+      <h1>Your Movie list </h1>
     </div>
   )
 }
