@@ -5,6 +5,7 @@ function Profile() {
     <div>
       <h1>Your Movie list </h1>
       <p>Under Construction</p>
+      <p>Coming Soon</p>
     </div>
   )
 }
