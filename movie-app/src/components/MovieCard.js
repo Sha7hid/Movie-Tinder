@@ -3,7 +3,7 @@ import React from 'react'
 function MovieCard({movie}) {
   return (
     <div className="movie">
-      {movie.title}
+      {movie}
     </div>
   )
 }
