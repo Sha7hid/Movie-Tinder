@@ -19,18 +19,20 @@ function Home() {
   fecthMovies()
  },[])
 
- 
- 
- movies.map(movie => {
+ const renderMovies = () => {
+return movies.map(movie => {
+  <TinderCard>
+    <MovieCard movie={movie}/>
+  </TinderCard>
+})
+ }
  return (
   <Layout>
 <h1>Welcome</h1>
-<TinderCard>
-{movie.title}
-  </TinderCard>
+{renderMovies()}
   </Layout>
  )
-})
+  
  
 
 }
