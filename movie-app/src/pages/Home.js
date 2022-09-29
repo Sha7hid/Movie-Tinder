@@ -20,7 +20,11 @@ function Home() {
  },[])
 
  const renderMovies = () => {
-
+return movies.map(movie => {
+  <TinderCard>
+    <MovieCard movie={movie}/>
+  </TinderCard>
+})
  }
  return (
   <Layout>

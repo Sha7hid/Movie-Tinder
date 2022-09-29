@@ -1,9 +1,9 @@
 import React from 'react'
 
-function MovieCard({movie}) {
+const MovieCard = ({movie}) =>{
   return (
-    <div>
-      
+    <div className={"movie"}>
+      {movie.title}
     </div>
   )
 }
