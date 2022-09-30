@@ -13,22 +13,25 @@ function Home() {
     }
   })
  console.log(data);
-data.results = movies;
+
 }
  useEffect(() => {
   fecthMovies()
  },[])
 
- return (movies.map(movie => {
-
-
+ const renderMovies = () => {
+return( movies.map(movie => {
+  <TinderCard>
+    <MovieCard movie={movie}/>
+  </TinderCard>
+}))
+ }
+ return (
   <Layout>
 <h1>Welcome</h1>
-<TinderCard>
-   {movie.title}
-   </TinderCard>
+{renderMovies()}
   </Layout>
- }))
+ )
   
  
 
