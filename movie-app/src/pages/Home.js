@@ -13,7 +13,7 @@ function Home() {
     }
   })
  console.log(data);
-
+movies = data.results;
 }
  useEffect(() => {
   fecthMovies()
