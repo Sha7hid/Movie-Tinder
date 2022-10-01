@@ -7,6 +7,7 @@ import { createClient } from '@supabase/supabase-js'
 import { useAuth } from '../auth';
 
 function Home() {
+
   const auth = useAuth();
   const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
   const supabaseKey = process.env.REACT_APP_SUPABASE_KEY
@@ -26,6 +27,7 @@ const movies = await data;
 setMovie(movies.results);
 }
 const addTowatchlist = async (movie) => {
+
 const {data, error} = await supabase.from("watchlists").insert({movie_id : movie.id, user_id: auth.user.id})
 if(error){
   console.log(error)
