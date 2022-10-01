@@ -4,6 +4,7 @@ import axios from 'axios';
 import TinderCard from 'react-tinder-card'
 import MovieCard from '../components/MovieCard';
 function Home() {
+  var movie;
   const [movies, setMovies] = useState([])
  const fecthMovies = async () => {
   const {data} = await axios.get("https://api.themoviedb.org/3/discover/movie",{
@@ -13,7 +14,7 @@ function Home() {
     }
   })
  console.log(data);
-movies = data.results;
+movie = data.results;
 }
  useEffect(() => {
   fecthMovies()
