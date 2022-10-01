@@ -3,6 +3,8 @@ import Layout from '../components/Layout'
 import axios from 'axios';
 import TinderCard from 'react-tinder-card'
 import MovieCard from '../components/MovieCard';
+import {supabase} from ''
+import { useAuth } from '../auth';
 function Home() {
   
   const [movie, setMovie] = useState([])
@@ -17,7 +19,9 @@ function Home() {
 const movies = await data;
 setMovie(movies.results);
 }
-
+const addTowatchlist = async (movie) => {
+const {data, error} = await supabase.from("watchlists").insert({movie_id : movie.id, user_id: useAuth.user.id})
+}
 
  useEffect(() => {
   fecthMovies()
