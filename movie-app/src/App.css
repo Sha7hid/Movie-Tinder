@@ -35,9 +35,16 @@
   background-color: var(--brand-color);
 }
 .movie{
+  position: absolute;
   width: 300px;
   height: 500px;
   background-color: var(--brand-color);
+}
+.movie-wrapper{
+  position: relative;
+width: 300px;
+margin-left: auto;
+margin-right: auto;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

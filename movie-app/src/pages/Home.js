@@ -17,6 +17,8 @@ function Home() {
 const movies = await data;
 setMovie(movies.results);
 }
+
+
  useEffect(() => {
   fecthMovies()
  },[])
@@ -31,7 +33,9 @@ return (
 {movie.map(movie => {
  return <>
  <div className="movie-wrapper">
- <TinderCard key={movie.id}>
+ <TinderCard
+ onSwipe={direction => direction === "right"? addTowatchlist():null}
+ key={movie.id}>
     <MovieCard movie={movie}/>
   </TinderCard>
  </div>
