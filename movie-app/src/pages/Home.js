@@ -61,6 +61,7 @@ return (
  onSwipe={direction => direction === "right"? addTowatchlist():null}
  key={movie.id}>
     <MovieCard movie={movie}/>
+  
   </TinderCard>
  </div>
  
