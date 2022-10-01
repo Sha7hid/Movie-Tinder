@@ -9,7 +9,7 @@ import { useAuth } from '../auth';
 function Home() {
   const auth = useAuth();
   const supabaseUrl = "https://plzmnbpsodtbagocourr.supabase.co"
-  const supabaseKey = env.SUPABASE_KEY
+  const supabaseKey = process.env.REACT_APP_SUPABASE_KEY
   const supabase = createClient(supabaseUrl, supabaseKey)
   const [movie, setMovie] = useState([])
   const [message, setMessage] = useState("")
