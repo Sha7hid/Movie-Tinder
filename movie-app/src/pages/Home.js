@@ -4,8 +4,8 @@ import axios from 'axios';
 import TinderCard from 'react-tinder-card'
 import MovieCard from '../components/MovieCard';
 function Home() {
-  var movie;
-  const [movies, setMovies] = useState([])
+  
+  const [movie, setMovie] = useState([])
  const fecthMovies = async () => {
   const {data} = await axios.get("https://api.themoviedb.org/3/discover/movie",{
     params:{
@@ -14,26 +14,30 @@ function Home() {
     }
   })
  console.log(data);
-movie = data.results;
+const movies = await data;
+setMovie(movies.results);
 }
  useEffect(() => {
   fecthMovies()
  },[])
 
- const renderMovies = () => {
-return( movies.map(movie => {
-  <TinderCard>
-    <MovieCard movie={movie}/>
-  </TinderCard>
-}))
- }
- return (
+
+
+
+
+return (
   <Layout>
 <h1>Welcome</h1>
-{renderMovies()}
+{movie.map(movie => {
+ return <>
+ <TinderCard key={movie.id}>
+    <MovieCard movie={movie}/>
+  </TinderCard>
+ </>
+})}
+
   </Layout>
  )
-  
  
 
 }
