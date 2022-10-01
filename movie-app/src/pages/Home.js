@@ -11,6 +11,8 @@ function Home() {
   const supabaseKey = process.env.SUPABASE_KEY
   const supabase = createClient(supabaseUrl, supabaseKey)
   const [movie, setMovie] = useState([])
+  const [message, setMessage] = useState("")
+  
  const fecthMovies = async () => {
   const {data} = await axios.get("https://api.themoviedb.org/3/discover/movie",{
     params:{
@@ -24,6 +26,12 @@ setMovie(movies.results);
 }
 const addTowatchlist = async (movie) => {
 const {data, error} = await supabase.from("watchlists").insert({movie_id : movie.id, user_id: auth.user.id})
+if(error){
+  console.log(error)
+}
+if(data){
+  setMessage("Movie has been added to your watchlist")
+}
 }
 
  useEffect(() => {
@@ -36,6 +44,7 @@ const {data, error} = await supabase.from("watchlists").insert({movie_id : movie
 
 return (
   <Layout>
+    {message&&message}
 <h1>Welcome</h1>
 {movie.map(movie => {
  return <>
