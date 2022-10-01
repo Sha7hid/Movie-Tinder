@@ -30,9 +30,12 @@ return (
 <h1>Welcome</h1>
 {movie.map(movie => {
  return <>
+ <div className="movie-wrapper">
  <TinderCard key={movie.id}>
     <MovieCard movie={movie}/>
   </TinderCard>
+ </div>
+ 
  </>
 })}
 
