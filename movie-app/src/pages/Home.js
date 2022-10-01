@@ -3,10 +3,13 @@ import Layout from '../components/Layout'
 import axios from 'axios';
 import TinderCard from 'react-tinder-card'
 import MovieCard from '../components/MovieCard';
-import {supabase} from ''
+import { createClient } from '@supabase/supabase-js'
 import { useAuth } from '../auth';
 function Home() {
-  
+  const auth = useAuth();
+  const supabaseUrl = process.env.SUPABASE_URL
+  const supabaseKey = process.env.SUPABASE_KEY
+  const supabase = createClient(supabaseUrl, supabaseKey)
   const [movie, setMovie] = useState([])
  const fecthMovies = async () => {
   const {data} = await axios.get("https://api.themoviedb.org/3/discover/movie",{
@@ -20,7 +23,7 @@ const movies = await data;
 setMovie(movies.results);
 }
 const addTowatchlist = async (movie) => {
-const {data, error} = await supabase.from("watchlists").insert({movie_id : movie.id, user_id: useAuth.user.id})
+const {data, error} = await supabase.from("watchlists").insert({movie_id : movie.id, user_id: auth.user.id})
 }
 
  useEffect(() => {
