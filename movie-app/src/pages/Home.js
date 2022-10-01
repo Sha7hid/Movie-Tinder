@@ -8,7 +8,7 @@ import { useAuth } from '../auth';
 
 function Home() {
   const auth = useAuth();
-  const supabaseUrl = "https://plzmnbpsodtbagocourr.supabase.co"
+  const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
   const supabaseKey = process.env.REACT_APP_SUPABASE_KEY
   const supabase = createClient(supabaseUrl, supabaseKey)
   const [movie, setMovie] = useState([])
