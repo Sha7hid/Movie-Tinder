@@ -5,10 +5,11 @@ import TinderCard from 'react-tinder-card'
 import MovieCard from '../components/MovieCard';
 import { createClient } from '@supabase/supabase-js'
 import { useAuth } from '../auth';
+
 function Home() {
   const auth = useAuth();
-  const supabaseUrl = process.env.SUPABASE_URL
-  const supabaseKey = process.env.SUPABASE_KEY
+  const supabaseUrl = "https://plzmnbpsodtbagocourr.supabase.co"
+  const supabaseKey = env.SUPABASE_KEY
   const supabase = createClient(supabaseUrl, supabaseKey)
   const [movie, setMovie] = useState([])
   const [message, setMessage] = useState("")
