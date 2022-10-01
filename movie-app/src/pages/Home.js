@@ -36,7 +36,11 @@ if(data){
 }
 
  useEffect(() => {
-  fecthMovies()
+  if(auth.user){
+    fecthMovies()
+  }
+  
+ 
  },[])
 
 
@@ -46,10 +50,13 @@ if(data){
 return (
   <Layout>
     {message&&message}
-<h1>Welcome</h1>
+    <h1>Welcome</h1>
+    {!auth.user && <h2>Please sign up</h2>}
+
 {movie.map(movie => {
  return <>
  <div className="movie-wrapper">
+
  <TinderCard
  onSwipe={direction => direction === "right"? addTowatchlist():null}
  key={movie.id}>
