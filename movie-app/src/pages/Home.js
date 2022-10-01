@@ -23,8 +23,8 @@ function Home() {
     }
   })
  console.log(data);
-const movies = await data;
-setMovie(movies.results);
+const movie = await data;
+setMovie(movie.results);
 }
 const addTowatchlist = async (movie) => {
 
