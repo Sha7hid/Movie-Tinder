@@ -12,7 +12,7 @@ function Home() {
   const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
   const supabaseKey = process.env.REACT_APP_SUPABASE_KEY
   const supabase = createClient(supabaseUrl, supabaseKey)
-  const [movie, setMovie] = useState([])
+  const [movies, setMovies] = useState([])
   const [message, setMessage] = useState("")
   
  const fecthMovies = async () => {
@@ -23,12 +23,12 @@ function Home() {
     }
   })
  console.log(data);
-const movie = await data;
-setMovie(movie.results);
+const movies = await data;
+setMovie(movies.results);
 }
 const addTowatchlist = async (movie) => {
 
-const {data, error} = await supabase.from("watchlists").insert({movie_id : movie.id, user_id: auth.user.id})
+const {data, error} = await supabase.from("watchlists").insert({movie_id : movies.id, user_id: auth.user.id})
 if(error){
   console.log(error)
 }
@@ -55,13 +55,13 @@ return (
     <h1>Welcome</h1>
     {!auth.user && <h2>Please sign up</h2>}
 
-{movie.map(movie => {
+{movies.map(movies => {
  return <>
  <div className="movie-wrapper">
  <TinderCard
  onSwipe={direction => direction === "right"? addTowatchlist():null}
- key={movie.id}>
-    <MovieCard movie={movie}/>
+ key={movies.id}>
+    <MovieCard movies={movies}/>
   
   </TinderCard>
  </div>
