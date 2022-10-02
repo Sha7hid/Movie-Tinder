@@ -58,7 +58,6 @@ return (
 {movie.map(movie => {
  return <>
  <div className="movie-wrapper">
-
  <TinderCard
  onSwipe={direction => direction === "right"? addTowatchlist():null}
  key={movie.id}>
