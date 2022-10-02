@@ -23,12 +23,12 @@ function Home() {
     }
   })
  console.log(data);
-const movies = await data;
-setMovie(movies.results);
+const movie = await data;
+setMovies(movie.results);
 }
 const addTowatchlist = async (movie) => {
 
-const {data, error} = await supabase.from("watchlists").insert({movie_id : movies.id, user_id: auth.user.id})
+const {data, error} = await supabase.from("watchlists").insert({movie_id : movie.id, user_id: auth.user.id})
 if(error){
   console.log(error)
 }
@@ -55,13 +55,13 @@ return (
     <h1>Welcome</h1>
     {!auth.user && <h2>Please sign up</h2>}
 
-{movies.map(movies => {
+{movies.map(movie => {
  return <>
  <div className="movie-wrapper">
  <TinderCard
  onSwipe={direction => direction === "right"? addTowatchlist():null}
- key={movies.id}>
-    <MovieCard movies={movies}/>
+ key={movie.id}>
+    <MovieCard movie={movie}/>
   
   </TinderCard>
  </div>
