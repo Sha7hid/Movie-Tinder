@@ -28,7 +28,7 @@ setMovies(movie.results);
 }
 const addTowatchlist = async (movie) => {
 
-const {data, error} = await supabase.from("watchlists").insert({movie_id : movie?.id, user_id: auth.user.id})
+const {data, error} = await supabase.from("watchlists").insert({movie_id : movie.id, user_id: auth.user.id})
 if(error){
   console.log(error)
 }
