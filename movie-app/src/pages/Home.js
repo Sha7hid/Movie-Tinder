@@ -56,6 +56,7 @@ return (
     {!auth.user && <h2>Please sign up</h2>}
 
 {movies.map(movie => {
+  
  return <>
  <div className="movie-wrapper">
  <TinderCard
