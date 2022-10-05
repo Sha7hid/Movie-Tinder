@@ -16,14 +16,16 @@ return (
         />
         </div>
         <div className="form-group">
-
+        <label htmlFor="username">Username:</label>
+        <input type="text" onChange={e => setUsername(e.target.value)} value={username}/>
         </div>
-<div className="form-group">
-
-</div>
-<div className="form-group">
-
-</div>
+      <div className="form-group">
+      <label htmlFor="website">Website:</label>
+        <input type="text" onChange={e => setWebsite(e.target.value)} value={website}/>
+       </div>
+     <div className="form-group">
+<button type={"submit"}>Save Profile</button>
+      </div>
     </form>
 </Layout>
   )
