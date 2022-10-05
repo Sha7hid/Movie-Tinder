@@ -11,7 +11,9 @@ return (
     <form>
         <div className="form-group">
 <label htmlFor="avatar">Choose Avatar:</label>
-        <input type="file" accept={"image/jpeg image/png"}/>
+        <input type="file" accept={"image/jpeg image/png"}
+        onChange={e => setImage(e.target.files[0])}
+        />
         </div>
         <div className="form-group">
 
