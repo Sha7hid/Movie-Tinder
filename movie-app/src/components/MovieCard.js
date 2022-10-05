@@ -1,8 +1,8 @@
 import React from 'react'
 
-const MovieCard = ({movie}) =>{
+const MovieCard = ({movie, swipe}) =>{
   return (
-    <div className={"movie"}>
+    <div className={`movie ${swipe ? "swipe":""}`}>
       {movie.title}
     </div>
   )

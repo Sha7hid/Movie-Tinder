@@ -38,14 +38,16 @@ getWatchlist()
   })
   const renderWatchlist = () => {
     return movies.map(movie => (
-    <MovieCard movie={movie}/>
+    <MovieCard movie={movie} swipe={true}/>
     ))
   }
   return (
  <Layout>
     <h1>Watchlist</h1>
-
-    {renderWatchlist()}
+<div className="grid">
+{renderWatchlist()}
+</div>
+    
  </Layout>
   )
 }

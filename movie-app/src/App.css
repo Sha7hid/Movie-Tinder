@@ -35,10 +35,18 @@
   background-color: var(--brand-color);
 }
 .movie{
-  position: absolute;
+  
   width: 300px;
   height: 500px;
   background-color: var(--brand-color);
+}
+.movie.swipe{
+  position: absolute;
+}
+.grid{
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .movie-wrapper{
   position: relative;
