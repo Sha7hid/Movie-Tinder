@@ -1,12 +1,13 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import Layout from "../components/Layout"
+import {supabase} from "../supabase";
+import {useAuth} from "../auth";
 
 function Profile() {
   return (
-    <div>
-      <h1>Your Movie list </h1>
-      <p>Under Construction</p>
-      <p>Coming Soon</p>
-    </div>
+ <Layout>
+    <h1>Watchlist</h1>
+ </Layout>
   )
 }
 
