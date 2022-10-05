@@ -8,7 +8,7 @@ function Profile() {
 const getWatchlist = async () => {
 const {data, error} = await supabase 
 .from("watchlists")
-.select()
+.select("movie_id")
 .match({user_id: auth.user.id})
 
 if(error){
