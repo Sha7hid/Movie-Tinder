@@ -60,7 +60,7 @@ return (
  return <>
  <div className="movie-wrapper">
  <TinderCard
- onSwipe={direction => direction === "right"? addTowatchlist():null}
+ onSwipe={direction => direction === "right"? addTowatchlist(movie):null}
  key={movie.id}>
     <MovieCard movie={movie}/>
   
