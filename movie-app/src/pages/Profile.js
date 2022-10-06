@@ -32,10 +32,14 @@ avatar_url: avatarUrl
 if(error){
     console.log(error)
 }
+if(data){
+    setMessage("Profile has been updated")
+}
 }
 
 return (
 <Layout>
+    {message && message}
     <h1>Profile</h1>
     <form onSubmit={handleSubmit}>
         <div className="form-group">
