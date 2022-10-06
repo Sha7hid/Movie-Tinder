@@ -29,11 +29,7 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.movie{
-  width: 300px;
-  height: 500px;
-  background-color: var(--brand-color);
-}
+
 .movie{
   position: absolute;
   height: 80%;
@@ -73,12 +69,18 @@ margin-right: auto;
 }
 @media screen and (max-width:480px) {
   .grid{
-   
     display:list-item;
   }
   .button{
-    width: 90%;
+    width: 70%;
+    margin-left: 15%;
   }
+  .movie.swipe{
+    position: static;
+   margin-left: 13%;
+   
+  }
+ 
 }
 .App-header {
   background-color: #282c34;
