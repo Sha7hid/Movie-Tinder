@@ -1,12 +1,16 @@
 import React, {useState} from 'react'
 import Layout from '../components/Layout'
-
+import { supabase } from '../supabase'
 const Profile = () => {
     const [image, setImage] =  useState()
     const [username, setUsername] = useState("")
     const [website, setWebsite] = useState("")
 const handleSubmit = async (e) => {
+e.preventDefault()
 
+if(image){
+    const {data, error} = await supabase.storage.from("avatars").upload()
+}
 }
 
 return (
