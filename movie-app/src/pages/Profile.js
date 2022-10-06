@@ -20,7 +20,7 @@ if(error){
 }
 if(data){
 setAvatarUrl(data.Key)
-avatarUrl = data.key;
+avatarUrl = data.key
 }
 }
 const {data, error} = await supabase.from("profiles").upsert({
