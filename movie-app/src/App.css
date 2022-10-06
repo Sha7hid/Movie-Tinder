@@ -36,6 +36,7 @@
 }
 .movie{
   position: absolute;
+  height: 80%;
   width: 300px;
   background-color: var(--brand-color);
 }
