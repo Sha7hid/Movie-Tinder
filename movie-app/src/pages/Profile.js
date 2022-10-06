@@ -5,6 +5,7 @@ const Profile = () => {
     const [image, setImage] =  useState()
     const [username, setUsername] = useState("")
     const [website, setWebsite] = useState("")
+    const [avatarUrl, setAvatarUrl] = useState("")
 const handleSubmit = async (e) => {
 e.preventDefault()
 
@@ -13,6 +14,9 @@ if(image){
 
 if(error){
     console.log(error)
+}
+if(data){
+
 }
 }
 
