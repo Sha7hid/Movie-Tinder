@@ -9,8 +9,13 @@ const handleSubmit = async (e) => {
 e.preventDefault()
 
 if(image){
-    const {data, error} = await supabase.storage.from("avatars").upload()
+    const {data, error} = await supabase.storage.from("avatars").upload(`${Date.now()}_${image.name}`,image)
+
+if(error){
+    console.log(error)
 }
+}
+
 }
 
 return (
