@@ -11,12 +11,13 @@ e.preventDefault()
 
 if(image){
     const {data, error} = await supabase.storage.from("avatars").upload(`${Date.now()}_${image.name}`,image)
-
+let avatarUrl =""
 if(error){
     console.log(error)
 }
 if(data){
-
+setAvatarUrl(data.Key)
+avatarUrl = data.key
 }
 }
 
