@@ -44,6 +44,7 @@ return (
 <Layout>
     {message && message}
     <h1>Profile</h1>
+    {avatarUrl ? <img src={`https://plzmnbpsodtbagocourr.supabase.co/storage/v1/object/public/avatars/${avatarUrl}`} alt=""/> : "No Avatar set"}
     <form onSubmit={handleSubmit}>
         <div className="form-group">
 <label htmlFor="avatar">Choose Avatar:</label>
