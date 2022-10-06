@@ -52,7 +52,8 @@ if(data){
 return (
   <Layout>
     {message&&message}
-    <h1>Welcome</h1>
+    <h1 className="welcome">Welcome</h1>
+    <h3>Swipe right to add to watchlist 👉</h3><br/>
     {!auth.user && <h2>Please sign up</h2>}
 
 {movies.map(movie => {
