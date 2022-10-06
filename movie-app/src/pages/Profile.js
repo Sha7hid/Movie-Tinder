@@ -8,7 +8,8 @@ const Profile = () => {
     const [username, setUsername] = useState("")
     const [website, setWebsite] = useState("")
     const [avatarUrl, setAvatarUrl] = useState("")
-const handleSubmit = async (e) => {
+const [message, setMessage] = useState("")
+    const handleSubmit = async (e) => {
 e.preventDefault()
 
 if(image){
@@ -28,6 +29,9 @@ username: username,
 website: website,
 avatar_url: avatarUrl
 })
+if(error){
+    console.log(error)
+}
 }
 
 return (
