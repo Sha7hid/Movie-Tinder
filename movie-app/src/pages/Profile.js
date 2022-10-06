@@ -11,10 +11,10 @@ const Profile = () => {
 const [message, setMessage] = useState("")
     const handleSubmit = async (e) => {
 e.preventDefault()
-
+let avatarUrl =""
 if(image){
     const {data, error} = await supabase.storage.from("avatars").upload(`${Date.now()}_${image.name}`,image)
-let avatarUrl =""
+
 if(error){
     console.log(error)
 }
