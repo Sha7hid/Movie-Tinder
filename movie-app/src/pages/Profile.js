@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import { supabase } from '../supabase'
 import { useAuth } from '../auth'
 const Profile = () => {
+    const auth = useAuth()
     const [image, setImage] =  useState()
     const [username, setUsername] = useState("")
     const [website, setWebsite] = useState("")
@@ -22,7 +23,10 @@ avatarUrl = data.key
 }
 }
 const {data, error} = await supabase.from("profiles").upsert({
-
+id: auth.user.id,
+username: username,
+website: website,
+avatar_url: avatarUrl
 })
 }
 
