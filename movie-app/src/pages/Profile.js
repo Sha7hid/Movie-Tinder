@@ -5,10 +5,14 @@ const Profile = () => {
     const [image, setImage] =  useState()
     const [username, setUsername] = useState("")
     const [website, setWebsite] = useState("")
+const handleSubmit = async (e) => {
+
+}
+
 return (
 <Layout>
     <h1>Profile</h1>
-    <form>
+    <form onSubmit={handleSubmit}>
         <div className="form-group">
 <label htmlFor="avatar">Choose Avatar:</label>
         <input type="file" accept={"image/jpeg image/png"}
@@ -20,7 +24,7 @@ return (
         <label htmlFor="username">Username:</label>
         <input type="text" onChange={e => setUsername(e.target.value)}
          value={username}/>
-         
+
         </div>
       <div className="form-group">
 
