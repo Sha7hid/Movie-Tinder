@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Layout from '../components/Layout'
 import { supabase } from '../supabase'
+import { useAuth } from '../auth'
 const Profile = () => {
     const [image, setImage] =  useState()
     const [username, setUsername] = useState("")
@@ -20,7 +21,9 @@ setAvatarUrl(data.Key)
 avatarUrl = data.key
 }
 }
+const {data, error} = await supabase.from("profiles").upsert({
 
+})
 }
 
 return (
