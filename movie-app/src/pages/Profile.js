@@ -11,7 +11,7 @@ const Profile = () => {
 const [message, setMessage] = useState("")
     const handleSubmit = async (e) => {
 e.preventDefault()
-let avatarUrl =""
+
 if(image){
     const {data, error} = await supabase.storage.from("avatars").upload(`${Date.now()}_${image.name}`,image)
 
@@ -20,9 +20,12 @@ if(error){
 }
 if(data){
 setAvatarUrl(data.Key)
-avatarUrl = data.key
+const name = avatarUrl;
+console.log(name)
 }
+
 }
+
 const {data, error} = await supabase.from("profiles").upsert({
 id: auth.user.id,
 username: username,
