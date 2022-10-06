@@ -61,6 +61,12 @@ margin-right: auto;
   width: 100%;
   cursor: pointer;
 }
+.welcome{
+ text-align: center;
+}
+h3{
+  text-align: center;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
