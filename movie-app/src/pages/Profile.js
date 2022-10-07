@@ -58,7 +58,7 @@ return (
         <input type="text" onChange={e => setUsername(e.target.value)}
          value={username}/>
 
-        </div>
+        </div><br/><br/>
       <div className="form-group">
 
       <label htmlFor="website">Website:</label>
