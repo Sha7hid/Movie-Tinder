@@ -67,6 +67,12 @@ margin-right: auto;
 h3{
   text-align: center;
 }
+a{
+  text-decoration: none;
+}
+a:link{
+  color: var(--brand-color);
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
