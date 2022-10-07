@@ -1,6 +1,5 @@
-# Movie-Tinder<br/><br/>
-
-A Movie watchlist creater web app with sign up and sign in using supabase magic links.And profile page to update your profile.<br/>
+# Movie-Tinder
+<b>A Movie watchlist creater web app with sign up and sign in using supabase magic links.And profile page to update your profile.<b/><br/><br/>
 # Home
 ![image](https://user-images.githubusercontent.com/96056167/194576987-37e7603f-7279-4707-a0a5-cd8d05297c85.png)
 
