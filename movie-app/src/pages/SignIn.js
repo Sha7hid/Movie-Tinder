@@ -20,9 +20,9 @@ function SignIn() {
     <div>
         <Layout>
           {message && message}
-        <h1>Sign In</h1>
+        <h1 className="signin-message">Sign In Or Sign Up</h1><br/>
         <form onSubmit={handleSignIn}>
-          <input type="email" value={email} onChange={e => setEmail(e.target.value)}/>
+          <input  className="signin-input" type="email" value={email} onChange={e => setEmail(e.target.value)}/>
           <button type='submit'>Sign In</button>
         </form>
         </Layout>
